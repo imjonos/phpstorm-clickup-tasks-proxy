@@ -31,7 +31,8 @@ def get_companies():
             'id': task.id,
             'name': task.name,
             'description': task.description,
-            'url': task.url
+            'url': task.url,
+            'status': task.status.status
         }
         result.append(item)
     return json.dumps(result)
