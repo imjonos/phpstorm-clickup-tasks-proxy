@@ -19,10 +19,8 @@ def get_companies():
     clickup = ClickUp(api_key)
     main_team = clickup.teams[team_id]
     main_space = main_team.spaces[space_id]
-
     main_project = main_space.projects[project_id]
     main_list = main_project.lists[list_id]
-
     tasks = main_list.get_all_tasks(include_closed=False, statuses=statuses)
 
     result: list = []
